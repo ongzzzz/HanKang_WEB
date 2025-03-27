@@ -1,0 +1,43 @@
+/* 한국어 폰트 */
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 900;
+  src: url("./Noto_Sans_KR/static/NotoSansKR-Black.ttf");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 400;
+  src: url("./Noto_Sans_KR/static/NotoSansKR-Medium.ttf");
+}
+@font-face {
+  font-family: "NotoSansKR";
+  font-weight: 300;
+  src: url("./Noto_Sans_KR/static/NotoSansKR-Regular.ttf");
+}
+
+@font-face {
+  font-family: "YES24";
+  src: url("./YES24MyoungjoR.otf");
+}
+
+@font-face {
+  font-family: "Hanyongun";
+  src: url("./hanyongun.otf");
+}
+
+/* 중국어 폰트 */
+@font-face {
+  font-family: "SrcMing";
+  src: url("./SrcMingItalXb.beta-2.ttf");
+}
+
+@font-face {
+  font-family: "NotoSerif";
+  font-weight: 400;
+  src: url("./Black_Han_Sans,Noto_Sans,Noto_Serif_SC/Noto_Serif_SC/static/NotoSerifSC-Medium.ttf");
+}
+@font-face {
+  font-family: "NotoSerif";
+  font-weight: 300;
+  src: url("./Black_Han_Sans,Noto_Sans,Noto_Serif_SC/Noto_Serif_SC/static/NotoSerifSC-Regular.ttf");
+}
