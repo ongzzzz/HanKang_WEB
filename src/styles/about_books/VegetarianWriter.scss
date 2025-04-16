@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("../../assets/fonts/Noto_Sans_KR/static/NotoSansKR-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Hanyongun";
+  src: url("../../assets/fonts/hanyongun.otf");
+}
+
+@font-face {
+  font-family: "YES24";
+  src: url("../../assets/fonts/YES24MyoungjoR.otf");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.writer-container {
+  padding: 40px 20px 40px 40px;
+  width: 520px;
+  height: 944px;
+  background-color: #fff;
+  overflow: hidden;
+
+  .writer-title {
+    > p {
+      font-family: "NotoSansKR";
+      font-weight: 900;
+      font-size: 16px;
+      color: #000;
+      margin: 0;
+    }
+
+    > span {
+      display: block;
+      font-family: "Hanyongun";
+      font-size: 50px;
+    }
+  }
+  .writer-content {
+    position: relative;
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+    font-family: "YES24";
+    font-size: 20px;
+    line-height: 200%;
+    padding-right: 20px;
+
+    &::-webkit-scrollbar {
+      width: 1.5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #969696;
+      border-radius: 100px;
+    }
+  }
+}
