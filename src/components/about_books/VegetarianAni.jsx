@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "../../styles/about_books/VegetarianAni.scss";
+import "../../styles/about_books/Vegetarian/VegetarianAni.scss";
 
 const messages = [
   "나는 나무가 되고싶어.",

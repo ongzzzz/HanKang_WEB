@@ -3,7 +3,7 @@ import Button from "../../components/button/Button";
 import GoButton from "../../components/button/GoButton";
 import VegetarianAni from "../../components/about_books/VegetarianAni";
 
-import "../../styles/about_books/Vegetarian.scss";
+import "../../styles/about_books/Vegetarian/Vegetarian.scss";
 
 const Vegetarian = () => {
   return (
