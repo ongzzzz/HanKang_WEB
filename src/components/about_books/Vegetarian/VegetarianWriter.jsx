@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import "../../styles/about_books/Vegetarian/VegetarianWriter.scss";
+import "../../..//styles/about_books/Vegetarian/VegetarianWriter.scss";
 
 const textMap = [
   "한강의 소설 『채식주의자』는 주인공 영혜가 갑작스럽게 육식을 거부하고 채식을 선택하면서 벌어지는 이야기를 다루고 있다. 이 작품은 채식이라는 행위를 통해 개인의 내면과 사회적 억압, 그리고 인간의 본성에 대한 깊은 탐구를 시도한다.",
