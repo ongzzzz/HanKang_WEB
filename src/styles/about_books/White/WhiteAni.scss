@@ -1,0 +1,63 @@
+@font-face {
+  font-family: "YoonChild";
+  src: url("../../../assets/fonts/YoonChildfundkoreaMinGuk.ttf");
+}
+
+@font-face {
+  font-family: "Hanyongun";
+  src: url("../../../assets/fonts/hanyongun.otf");
+}
+
+@font-face {
+  font-family: "YES24";
+  src: url("../../../assets/fonts/YES24MyoungjoR.otf");
+}
+
+body {
+  background-color: #fff;
+}
+
+.white-ani-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 575px;
+  height: 1024px;
+
+  .white-ani-title {
+    position: relative;
+    width: 425px;
+
+    .en {
+      font-size: 80px;
+      font-family: "YoonChild";
+      color: #E7E7E7;
+    }
+
+    .kr {
+      position: absolute;
+      left: 10px;
+      font-size: 70px;
+      font-family: "Hanyongun";
+      color: #000;
+    }
+  }
+
+  .white-ani-content {
+    width: 425px;
+    overflow: hidden;
+
+    > p {
+      font-family: "YES24";
+      font-size: 20px;
+      line-height: 200%;
+      color: #000;
+
+      .split-char {
+        display: inline-block;
+        will-change: transform, opacity;
+      }
+    }
+  }
+}
