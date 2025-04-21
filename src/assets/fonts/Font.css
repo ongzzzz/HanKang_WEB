@@ -1,5 +1,10 @@
 /* 한국어 폰트 */
 @font-face {
+  font-family: "YoonChild";
+  src: url("./YoonChildfundkoreaMinGuk.ttf");
+}
+
+@font-face {
   font-family: "NotoSansKR";
   font-weight: 900;
   src: url("./Noto_Sans_KR/static/NotoSansKR-Black.ttf");
