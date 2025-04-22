@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 
 import Home from '../pages/home/Home';
 import Vegetarian from '../pages/about_books/Vegetarian';
-import VegetarianAni from '../components/about_books/VegetarianAni';
+import White from '../pages/about_books/White';
 
 const Router = () => {
   return (
@@ -10,6 +10,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/aboutbooks/vegetarian" element={<Vegetarian/>}/>
+        <Route path="/aboutbooks/white" element={<White />}/>
       </Routes>
     </BrowserRouter>
   );
