@@ -1,7 +1,7 @@
 import "../../styles/button/GoButton.scss";
-const GoButton = ({ ment }) => {
+const GoButton = ({ ment, onClick }) => {
   return (
-    <button className="goto-btn">{ment}</button>
+    <button className="goto-btn" onClick={onClick}>{ment}</button>
   );
 };
 

@@ -6,12 +6,10 @@
 .goto-btn {
   background-image: url("../../../public/images/home/sticky_masking.png");
   background-color: transparent;
+  background-size: contain;
   cursor: pointer;
   border: none;
-  width: 215px;
-  height: 55px;
 
   font-family: "NotoSansKR";
-  font-weight: 900;
   font-size: 16px;
 }

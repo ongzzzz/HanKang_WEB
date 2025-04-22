@@ -1,0 +1,100 @@
+.white-container {
+  width: 100vw;
+  height: 100vh;
+
+  .main-wrapper {
+    display: flex;
+    align-items: center;
+
+    .left-section {
+      width: 780px;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    
+      .exit-btn {
+        background-image: url("../../../assets/svg/button/exit_button_black.svg");
+        margin-top: 40px;
+        margin-left: 30px;
+      }
+    
+      .white-ani-container {
+        margin-left: calc(30px + 49px + 20px);
+      }
+    }
+      
+    .right-section {
+      width: calc(100% - 780px);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 100px;
+    }
+  }
+
+  .scroll-wrapper {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+
+    .ments {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      font-family: "YES24";
+      font-size: 20px;
+      line-height: 200%;
+
+      span {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 3s ease;
+      }
+
+      span.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .ment-0 {
+        position: absolute;
+        top: 13%;
+        left: 17%;
+        width: 480px;
+        
+      }
+      .ment-1 {
+        position: absolute;
+        top: 30%;
+        right: 15%;
+        width: 480px;
+      }
+      .ment-2 {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        width: 480px;
+      }
+      .ment-3 {
+        position: absolute;
+        top: 70%;
+        left: 43%;
+        width: 500px;
+      }
+    }
+
+    .goto-btn {
+      width: 215px;
+      height: 55px;
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 900;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.modal-back {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #D0D0D0;
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+
+    .modal-container {
+      position: relative;
+      background: #FFFDF7;
+      width: 830px;
+      height: 780px;
+      border-radius: 35px;
+      box-shadow: 2px 4px 3.1px 0px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .modal-close-btn {
+        background-image: url("../../assets/svg/button/close_btn.svg");
+        background-color: transparent;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        border: none;
+        width: 26px;
+        height: 34px;
+        position: absolute;
+        right: 4%;
+        top: 4%;
+      }
+
+      .modal-content {
+        width: 750px;
+        height: 650px;
+      }
+    }
+}

@@ -1,0 +1,40 @@
+.modalitem-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+
+  .modalitem-title {
+    font-family: "SrcMing";
+    font-size: 25px;
+    margin-left: 25px;
+  }
+
+  .modalitem-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "NotoSansKR-Medium";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 35px;
+
+    .modalitem-img {
+      background-position: center;
+      width: 140px;
+      height: 184px;
+    }
+
+    .modalitem-script {
+      width: 480px;
+      height: 151px;
+      margin-top: -15px;
+    }
+  }
+  .goto-btn {
+    width: 161px;
+    height: 46px;
+    margin-left: 23px;
+  }
+}
