@@ -1,0 +1,47 @@
+.mayof-writer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+  height: 700px;
+  position: relative;
+  padding: 15px;
+
+    .mayof-writer-title {
+      display: flex;
+      height: 85px;
+
+      > span {
+        font-family: "Hanyongun";
+        font-size: 60px;
+        line-height: 140%;
+      }
+
+      > img {
+        position: absolute;
+        width: 285px;
+        height: 285px;
+        right: 40px;
+        top: -120px;
+      }
+    }
+
+    .mayof-writer-content {
+      font-family: "YES24";
+      font-size: 18px;
+      line-height: 225%;
+      letter-spacing: 1%;
+      height: 600px;
+      overflow-y: scroll;
+      padding-right: 20px;
+
+      &::-webkit-scrollbar {
+        width: 1.5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #969696;
+        border-radius: 100px;
+      }
+    }
+}
