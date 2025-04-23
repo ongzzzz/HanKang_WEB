@@ -1,0 +1,58 @@
+.yeosu-back {
+  background: #A5D0F9;
+  width: 1440px;
+  height: 25px; 
+}
+
+.yeosu-container {
+  width: 100vw;
+  height: calc(100vh - 25px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+    
+
+  .yeosu-title {
+    display: flex;
+    align-items: center;
+
+    > span {
+      font-family: "Hanyongun";
+      font-size: 50px;
+    }
+
+    .exit-btn {
+      position: absolute;
+      background-image: url("../../../assets/svg/button/exit_button_black.svg");
+      left: 2%;
+    }
+  }
+  
+  .yeosu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1223px;
+    height: 290px;
+    font-family: "YES24";
+    font-size: 18px;
+    text-align: center;
+    line-height: 225%;
+    letter-spacing: 1%;
+    overflow-y: scroll;
+
+    .yeosu-blue {
+      color: #1369BC;
+    }
+  }
+
+  .goto-btn {
+    position: absolute;
+    width: 215px;
+    height: 55px;
+    font-weight: 900;
+    right: 5%;
+    bottom: 5%;
+  }
+}
