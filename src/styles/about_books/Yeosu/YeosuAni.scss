@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yeosu-ani-container {
+  width: 1300px;
+  height: 555px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  > img {
+    position: absolute;
+  }
+
+  .yeosu-paper {
+    margin-left: 300px;
+    width: 368px;
+    height: 528px;
+  }
+
+  .yeosu-picture {
+    margin-right: 230px;
+    width: 545px;
+    height: 587px;
+  }
+
+}
