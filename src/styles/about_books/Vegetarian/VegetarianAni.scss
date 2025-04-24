@@ -1,43 +1,87 @@
-@font-face {
-  font-family: "NotoSansKR";
-  src: url("../../assets/fonts/Noto_Sans_KR/static/NotoSansKR-Medium.ttf");
-}
-
-* {
-  box-sizing: border-box;
-}
-
 .ani-container {
-  border: 1px solid black;
-  width: 700px;
+  width: 740px;
   height: 1024px;
-  overflow: hidden;
+  // overflow: hidden;
+
+  .message-bubbles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .bubble {
+      position: absolute;
+      padding: 18px 25px;
+      background-color: #000;
+
+      color: #fff;
+      font-family: "NotoSansKR-Regular";
+      font-size: 18px;
+      line-height: 200%;
+    }
+
+    /* 말풍선 위치 지정 (이미지 보고 조절) */
+    .bubble-1 { 
+      top: 5%; 
+      left: 8%; 
+      border-radius: 0 25px 25px 25px;
+    }
+    .bubble-2 { 
+      top: 12%; 
+      right: 8%; 
+      border-radius: 25px 25px 0 25px;
+    }
+    .bubble-3 { 
+      top: 19%; 
+      left: 30%; 
+      border-radius: 0 25px 25px 25px;
+    }
+    .bubble-4 { 
+      top: 30%; 
+      right: 25%; 
+      border-radius: 25px 25px 0 25px;
+    }
+    .bubble-5 { 
+      top: 35%; 
+      left: 10%; 
+      border-radius: 25px 25px 0 25px;
+    }
+    .bubble-6 { 
+      top: 45%; 
+      right: 12%; 
+      border-radius: 0 25px 25px 25px;
+    }
+    .bubble-7 { 
+      top: 53%; 
+      left: 20%; 
+      border-radius: 0 25px 25px 25px;
+    }
+    .bubble-8 { 
+      top: 65%; 
+      left: 57%; 
+      border-radius: 25px 25px 25px 0;
+    }
+    .bubble-9 { 
+      top: 70%; 
+      left: 10%; 
+      border-radius: 25px 0 25px 25px;
+    }
+    .bubble-10 { 
+      top: 78%; 
+      left: 50%; 
+      border-radius: 25px 25px 0 25px;
+    }
+  }
+
+  > .goto-btn {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    font-weight: 900;
+    left: 280px;
+    bottom: 6%;
+  }
 }
 
-.message-bubbles {
-  border: 1px solid red;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
 
-.bubble {
-  position: absolute;
-  padding: 8px 20px;
-  background-color: #000;
-  color: #fff;
-  font-family: "NotoSansKR";
-  font-size: 18px;
-  border-radius: 23px;
-  line-height: 200%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-}
 
-/* 말풍선 위치 지정 (이미지 보고 조절) */
-.bubble-1 { top: 80px; left: 47%; transform: translateX(-50%); }
-.bubble-2 { top: 140px; left: 58%; transform: translateX(-50%); }
-.bubble-3 { top: 210px; left: 43%; transform: translateX(-50%); }
-.bubble-4 { top: 290px; left: 52%; transform: translateX(-50%); }
-.bubble-5 { top: 370px; left: 40%; transform: translateX(-50%); }
-.bubble-6 { top: 460px; left: 60%; transform: translateX(-50%); }
-.bubble-7 { top: 540px; left: 50%; transform: translateX(-50%); }
+

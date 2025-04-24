@@ -1,10 +1,12 @@
 .vegetarian-container {
-  width: 1440px;
-  height: 1024px;
-  position: relative;
-  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 
-  // 배경 이미지
+  display: flex;
+  position: relative;
+  // flex-direction: row;
+  // overflow: hidden;
+
   &::before {
     content: "";
     position: absolute;
@@ -15,19 +17,18 @@
     background-image: url("../../../images/about-books/vegetarian.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    // filter: blur(1px);
-    opacity: 0.85;
-    // z-index: -1;
   }
 
-  // writer 컴포넌트 포지셔닝
-  .writer-wrapper {
+  .exit-btn {
     position: absolute;
-    top: 50%;
-    left: 102px;
-    transform: translateY(-50%);
-    height: 100%;
+    background-image: url("../../../assets/svg/button/exit_button_black.svg");
+    left: 3%;
+    top: 4%;
+  }
+
+  .writer-container {
+    position: absolute;
+    left: 120px;
   }
 
   // 뒤로가기 버튼 포지셔닝
@@ -36,15 +37,8 @@
     top: 30px;
     left: 25px;
   }
-
-  // 작품 추천 버튼 포지셔닝
-  .goto-btn-wrapper {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-  }
-
-  .animation-wrapper {
+  
+  .ani-container {
     position: absolute;
     right: 0px;
   }
