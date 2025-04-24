@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { motion } from "framer-motion";
 
 import GoButton from "../../button/GoButton";
 import "../../../styles/about_books/Mayof/MayofAni.scss";
@@ -19,9 +19,7 @@ const mayofModalData = [
   },
 ];
 
-const MayofAni = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const MayofAni = ({isOpen, setIsOpen}) => {
 
   return (
     <div className="mayof-ani-container">
@@ -38,12 +36,36 @@ const MayofAni = () => {
         </div>
         <img className="mayof-player" src="../../images/about-books/mayof-player.png" />
       </div>
-      <img className="picture1" src="../../images/about-books/mayof-picture1.png" />
-      <img className="picture2" src="../../images/about-books/mayof-picture2.png" />
-      <img className="paper" src="../../images/about-books/mayof-paper.png" />
+      <motion.img 
+        className="picture1" 
+        src="../../images/about-books/mayof-picture1.png" 
+        whileHover={{
+          scale: 1.1,
+          y: -10,
+          transition: { type: "spring", stiffness: 200, damping: 20 }
+        }}
+      />
+      <motion.img 
+        className="picture2" 
+        src="../../images/about-books/mayof-picture2.png" 
+        whileHover={{
+          scale: 1.1,
+          y: -10,
+          transition: { type: "spring", stiffness: 200, damping: 20 }
+        }}
+      />
+      <motion.img 
+        className="paper" 
+        src="../../images/about-books/mayof-paper.png" 
+        whileHover={{
+          scale: 1.1,
+          y: -10,
+          transition: { type: "spring", stiffness: 200, damping: 20 }
+        }}
+      />
 
       {isOpen && (
-        <Modal data={mayofModalData} onClose={() => setIsOpen(false)} />
+        <Modal data={mayofModalData} onClose={() => setIsOpen(false)}/>
       )}
     </div>
   );

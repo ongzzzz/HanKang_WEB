@@ -13,6 +13,7 @@
     background-repeat: no-repeat;
     width: 948px;
     height: 690px;
+    z-index: 11;
 
     .left-section {
       position: absolute;
@@ -42,28 +43,36 @@
       position: absolute;
       right: 10%;
       top: 6%;
+      filter: grayscale(100%);
+      transition: filter 0.4s ease;
+
+      &:hover {
+        filter: grayscale(0%);
+      }
     }
   }
     
-  > img {
+  .picture1,
+  .picture2,
+  .paper {
     position: absolute;
   }
 
   .picture1 {
     left: -25%;
     top: -18%;
-    z-index: -2;
+    z-index: 6;
   }
 
   .picture2 {
     right: -10%;
     top: -10%;
-    z-index: -3;
+    z-index: 5;
   }
 
   .paper {
     right: -4%;
     top: -2%;
-    z-index: -1;
+    z-index: 7;
   }
 }
