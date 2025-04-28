@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "NotoSansKR-Medium";
+  font-weight: 400;
+  src: url("../../assets/fonts/Noto_Sans_KR/static/NotoSansKR-Medium.ttf");
+}
+
+.nav-container {
+  // border: 1px solid black;
+  width: 100%;
+  height: 25px;
+
+  font-family: "NotoSansKR-Medium";
+  font-size: 20px;
+  
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+  gap: 81px;
+
+  > span {
+    cursor: pointer;
+  }
+
+  .nav-home {
+    font-family: "YoonChild";
+    color: #1369BC;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+}
