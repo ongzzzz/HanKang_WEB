@@ -1,0 +1,84 @@
+.carousel-container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/carousel/carousel-bgi.png");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .nav-container {
+    position: absolute;
+    top: 5%;
+
+    .nav-aboutbooks {
+      font-family: "YoonChild";
+      color: #1369BC;
+      font-size: 25px;
+      font-weight: bold;
+    }
+  }
+
+  .translate-container {
+    // border: 1px solid black;
+    position: absolute;
+    top: 4%;
+    right: 3%;
+  }
+  
+  .swiper {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-55%, -50%);
+    width: 340px;
+    height: 526px;
+  
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      transition: opacity 0.3s ease;
+  
+      &.slide1 {
+        background-image: url("../../images/carousel/yeosu-book.png");
+      }
+      &.slide2 {
+        background-image: url("../../images/carousel/mayof-book.png");
+      }
+      &.slide3 {
+        background-image: url("../../images/carousel/vegetarian-book.png");
+      }
+      &.slide4 {
+        background-image: url("../../images/carousel/white-book.png");
+      }
+
+      opacity: 0.5;
+
+      &.swiper-slide-active {
+        opacity: 1;
+        z-index: 10;
+      }
+    }
+  }
+
+
+
+
+
+}
