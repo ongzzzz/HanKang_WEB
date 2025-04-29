@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import WhiteAni from "../../components/about_books/White/WhiteAni";
 import Button from "../../components/button/Button";
@@ -30,6 +31,7 @@ const whiteModalData = [
 
 const White = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const nav = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -53,7 +55,7 @@ const White = () => {
     <div className="white-container">
       <div className="main-wrapper">
         <div className="left-section">
-          <Button className="exit-btn"/>
+          <Button className="exit-btn" onClick={() => nav("/aboutbooks")}/>
           <WhiteAni />
         </div>
         <div className="right-section">

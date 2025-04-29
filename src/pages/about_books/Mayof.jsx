@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import MayofWriter from "../../components/about_books/Mayof/MayofWriter";
@@ -10,6 +11,7 @@ import "../../styles/about_books/Mayof/Mayof.scss";
 const Mayof = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isOpen, setIsOpen] = useState(false);
+  const nav = useNavigate();
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -26,7 +28,7 @@ const Mayof = () => {
         cursor: isOpen ? "default" : "none",
       }}
     >
-      <Button />
+      <Button onClick={() => nav("/aboutbooks")} />
       <MayofWriter />
       <MayofAni isOpen={isOpen} setIsOpen={setIsOpen} />
 

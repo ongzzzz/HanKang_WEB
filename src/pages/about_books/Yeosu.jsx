@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import Button from "../../components/button/Button";
 import GoButton from "../../components/button/GoButton";
@@ -38,6 +39,7 @@ const Yeosu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrollRef = useRef(null);
   const [rootEl, setRootEl] = useState(null);
+  const nav = useNavigate();
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -50,7 +52,7 @@ const Yeosu = () => {
       <div className="yeosu-back"></div>
       <div className="yeosu-container">
         <div className="yeosu-title">
-          <Button />
+          <Button onClick={() => nav("/aboutbooks")}/>
           <span>여수의 사랑</span>
         </div>
         <div className="yeosu-content" ref={scrollRef}>
