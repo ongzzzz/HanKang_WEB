@@ -1,7 +1,29 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import Loading from "../../components/loading/Loading";
 // import "../../styles/";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+
+    const timer1 = setTimeout(() => {
+      setFadeOut(true);
+    }, 2000);
+
+    const timer2 = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }, []);
+
+  if (loading) return <Loading fadeOut={fadeOut} />;
+
   return (
     <div className="home">
       {/* 중앙 텍스트 */}
