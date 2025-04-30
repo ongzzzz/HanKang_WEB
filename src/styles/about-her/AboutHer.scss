@@ -1,0 +1,164 @@
+.abouther-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFAEE;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/about-her/note-bgi.png");
+    background-repeat: no-repeat;
+  }
+
+  .nav-container {
+    position: absolute;
+    top: 5%;
+
+    .nav-abouther {
+      font-family: "YoonChild";
+      color: #1369BC;
+      font-weight: bold;
+    }
+  }
+
+  .translate-container {
+    position: absolute;
+    top: 4%;
+    right: 3%;
+  }
+
+  .writer-wrapper {
+    width: 1000px;
+    height: 850px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .photos {
+      position: relative;
+      height: 420px;
+
+      > p, img {
+        position: absolute;
+      }
+
+      .name-hankang {
+        font-family: "Hanyongun";
+        font-size: 37px;
+        top: 0;
+        left: 36%;
+        transform: rotate(-10.24deg);
+      }
+
+      .line-1 {
+        top: 45%;
+        left: 24%;
+        width: 150px;
+        height: 40px;
+      }
+
+      .star {
+        top: 33%;
+        left: 16%;
+      }
+
+      .ment1 {
+        top: 45%;
+        left: 8%;
+        font-size: 16px;
+        font-family: "NotoSansKR-Medium";
+        text-align: center;
+        color: rgba($color: #000, $alpha: 0.6);
+      }
+
+      .photo-hankang {
+        top: 18%;
+        left: 36%;
+        z-index: 1;
+        width: 240px;
+        height: 310px;
+      }
+
+      .line-2 {
+        width: 170px;
+        height: 100px;
+        top: 23%;
+        left: 52%;
+      }
+
+      .music {
+        top: 22%;
+        right: 19%;
+      }
+
+      .ment2 {
+        top: 40%;
+        right: 10%;
+        font-size: 16px;
+        font-family: "NotoSansKR-Medium";
+        color: rgba($color: #000, $alpha: 0.6);
+      }
+
+      .line-3 {
+        width: 160px;
+        height: 66px;
+        top: 64%;
+        right: 24%;
+      }
+
+      .let-go-btn {
+        bottom: 18%;
+        right: 10%;
+        font-size: 16px;
+        font-family: "NotoSansKR-Medium";
+        color: rgba($color: #000, $alpha: 0.6);
+        cursor: pointer;
+
+        .her-blue {
+          color: #1369BC;
+          font-weight: normal;
+        }
+      }
+    }
+
+    .ments {
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      .bold-ments {
+        font-family: "NotoSansKR-Bold";
+        font-weight: bold;
+        font-size: 20px;
+        position: absolute;
+        top: -6%;
+      }
+
+      > span {
+        font-family: "NotoSansKR-Regular";
+        font-size: 16px;
+        line-height: 45px;
+        text-align: center;
+
+        position: absolute;
+        top: 13%;
+      }
+    }
+  }
+}
