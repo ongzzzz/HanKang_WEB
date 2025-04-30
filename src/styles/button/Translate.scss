@@ -16,13 +16,13 @@
     font-family: "NotoSansKR-Medium";
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
 
     &.active {
       font-family: "YoonChild";
       color: #1369BC;
-      font-size: 25px;
+      font-size: 16px;
       font-weight: bold;
     }
   }
