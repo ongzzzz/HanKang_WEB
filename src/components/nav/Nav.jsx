@@ -7,8 +7,8 @@ const Nav = () => {
   return (
     <div className="nav-container">
       <span className="nav-home" onClick={() => nav("/")}>HOME</span>
-      <span className="nav-abouther" onClick={() => nav("/")}>ABOUT HER</span>
-      <span className="nav-aboutbooks" onClick={() => nav("/")}>ABOUT BOOKS</span>
+      <span className="nav-abouther" onClick={() => nav("/abouther")}>ABOUT HER</span>
+      <span className="nav-aboutbooks" onClick={() => nav("/aboutbooks")}>ABOUT BOOKS</span>
     </div>
   );
 };
