@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "NotoSerif-Medium";
+  src: url("src/assets/fonts/Black_Han_Sans,Noto_Sans,Noto_Serif_SC/Noto_Serif_SC/static/NotoSerifSC-Medium.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFAEE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .home-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 730px;
+
+    .home-images {
+      position: absolute;
+      width: 100vw;
+      height: 730px;
+
+      > img {
+        position: absolute;
+      }
+
+      .memo {
+        z-index: 1;
+        pointer-events: auto;
+        cursor: pointer;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .snow {
+        top: 17%;
+        left: 24%;
+        z-index: 2;
+      }
+
+      .mayof {
+        top: 24%;
+        left: 34%;
+        z-index: 5;
+      }
+
+      .flower {
+        top: 28%;
+        left: 45%;
+        z-index: 5;
+      }
+
+      .sea {
+        top: 8%;
+        right: 16%;
+        z-index: 4;
+      }
+
+      .hankang {
+        top: 46%;
+        left: 41%;
+        z-index: 6;
+      }
+
+      .navi {
+        top: 4%;
+        left: 40%;
+        z-index: 4;
+      }
+
+      .tree {
+        top: 46%;
+        left: 28%;
+        z-index: 7;
+      }
+
+      .tape {
+        top: 38%;
+        right: 21%;
+        z-index: 7;
+      }
+
+      .fire {
+        top: 64%;
+        right: 30%;
+      }
+
+      .letter {
+        top: 65%;
+        left: 33%;
+        z-index: 8;
+      }
+    }
+
+    .home-texts {
+      position: relative;
+      width: 100vw;
+      height: 730px;
+      top: 3%;
+
+      > p {
+        position: absolute;
+      }
+
+      .text-1, .text-4 {
+        font-family: "YES24";
+        font-size: 16px;
+      }
+
+      .text-2, .text-3, .text-5 {
+        font-family: "NotoSerif-Medium";
+        font-size: 16px;
+      }
+
+      .text-1 {
+        top: 15%;
+        left: 12%;
+      }
+
+      .text-2 {
+        top: 10%;
+        right: 28%;
+      }
+
+      .text-3 {
+        top: 40%;
+        right: 8%;
+      }
+
+      .text-4 {
+        bottom: 18%;
+        right: 10%;
+      }
+
+      .text-5 {
+        bottom: 25%;
+        left: 7%;
+      }
+    }
+  }
+
+  .home-title {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    margin-top: -20px;
+
+    > p {
+      font-family: "Hanyongun";
+      font-weight: bold;
+      font-size: 30px;
+      color: #315D88;
+    }
+
+    > h1 {
+      font-family: "SrcMing";
+      color: #315D88;
+      font-size: 50px;
+    }
+
+    .goto-btn {
+      width: 215px;
+      height: 55px;
+      font-weight: 900;
+      margin-top: 13px;
+    }
+  }
+}

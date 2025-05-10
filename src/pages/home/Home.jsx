@@ -1,13 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
 import Loading from "../../components/loading/Loading";
-// import "../../styles/";
+import GoButton from "../../components/button/GoButton";
+import HomeMemo from "../../components/home/HomeMemo";
+
+import "../../styles/home/Home.scss";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
   const [fadeOut, setFadeOut] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const nav = useNavigate();
 
   useEffect(() => {
-
     const timer1 = setTimeout(() => {
       setFadeOut(true);
     }, 2000);
@@ -25,36 +32,38 @@ const Home = () => {
   if (loading) return <Loading fadeOut={fadeOut} />;
 
   return (
-    <div className="home">
-      {/* 중앙 텍스트 */}
-      <div className="home__title">
-        <p>: 한강의 문책</p>
-        <h1>韩江的笔记</h1>
-        <button>GET STARTED</button>
+    <div className="home-container">
+      <div className="home-wrapper">
+        <div className="home-images">
+          <img className="memo" src="../../images/home/memo.png" onClick={() => setIsOpen(true)} />
+          <motion.img className="snow" src="../../images/home/photo_snow.png" drag />
+          <motion.img className="mayof" src="../../images/home/photo_mayof.png" drag />
+          <motion.img className="flower" src="../../images/home/photo_flower.png" drag />
+          <motion.img className="sea" src="../../images/home/photo_sea.png" drag />
+          <motion.img className="hankang" src="../../images/home/photo_hankang.png" drag />
+          <motion.img className="navi" src="../../images/home/sticky_navi.png" drag />
+          <motion.img className="tree" src="../../images/home/sticky_tree.png" drag />
+          <motion.img className="tape" src="../../images/home/sticky_tape.png" drag />
+          <motion.img className="fire" src="../../images/home/sticky_fire.png" drag />
+          <motion.img className="letter" src="../../images/home/sticky_letter.png" drag />
+        </div>
+        <div className="home-texts">
+          <p className="text text-1">어느 곳 하나 고향이 아니었어요</p>
+          <p className="text text-2">我决定不再吃肉了</p>
+          <p className="text text-3">我去找你吧。</p>
+          <p className="text text-4">촛불의 가장자리만 흔들게 할까.</p>
+          <p className="text text-5">现在让我把纯白的东西交给你吧。</p>
+        </div>
+      </div>
+      <div className="home-title">
+        <p>: 한강의 공책</p>
+        <h1>韩江的 <br /> 笔记</h1>
+        <GoButton ment="GET STARTED" onClick={() => nav("/abouther")}/>
       </div>
 
-      {/* 배치된 이미지들 */}
-      <div className="home__images">
-        <div className="img img--snow" />
-        <div className="img img--tree" />
-        <div className="img img--letter" />
-        <div className="img img--photo1" />
-        <div className="img img--photo2" />
-        <div className="img img--photo3" />
-        <div className="img img--vhs" />
-        <div className="img img--candle" />
-        <div className="img img--butterfly" />
-        <div className="img img--wave" />
-      </div>
-
-      {/* 문구들 */}
-      <div className="home__texts">
-        <p className="text text--1">어느 곳 하나 고향이 아니었어요</p>
-        <p className="text text--2">我决定不再吃肉了</p>
-        <p className="text text--3">我去找你吧。</p>
-        <p className="text text--4">촛불의 가장자리만 흔들게 할까.</p>
-        <p className="text text--5">现在让我把纯白的东西交给你吧。</p>
-      </div>
+      {isOpen && (
+        <HomeMemo onClose={() => setIsOpen(false)}/>
+      )}
     </div>
   );
 };
