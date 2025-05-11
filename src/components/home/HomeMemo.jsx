@@ -1,9 +1,27 @@
+import { useEffect, useRef } from "react";
 import "../../styles/home/HomeMemo.scss";
 
 const HomeMemo = ({onClose}) => {
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play().catch((err) => {
+        console.warn("Auto-play was prevented:", err);
+      });
+    }
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
+  }, []);
   return (
     <div className="memo-back" onClick={onClose}>
       <div className="memo-container" onClick={(e) => e.stopPropagation()}>
+        <audio ref={audioRef} src="/audio/rain.m4a" loop />
         <div className="memo-content">
           <p>
           여덟 살 때의 어느 날을 기억합니다. 
