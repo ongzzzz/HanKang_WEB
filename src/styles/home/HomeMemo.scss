@@ -41,26 +41,24 @@
           top: 13%;
           left: 47%;
         }
-        
+      }
+
+      .memo-script {
         &.lang-kr {
-          p {
-            font-family: "YES24";
-            font-size: 16px;
-            line-height: 150%;
-          }
+          font-family: "YES24";
+          font-size: 16px;
+          line-height: 150%;
         }
 
         &.lang-cn {
-          p {
-            width: 535px;
-            position: absolute;
-            top: 18%;
-            font-family: "NotoSerif-Regular";
-            font-size: 17px;
-            line-height: 155%;
-          }
+          width: 535px;
+          position: absolute;
+          top: 18%;
+          font-family: "NotoSerif-Regular";
+          font-size: 17px;
+          line-height: 155%;
         }
-      }
+      }    
     }
   }
 }

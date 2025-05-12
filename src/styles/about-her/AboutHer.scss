@@ -57,11 +57,21 @@
       }
 
       .name-hankang {
-        font-family: "Hanyongun";
-        font-size: 37px;
-        top: 0;
-        left: 36%;
-        transform: rotate(-10.24deg);
+        &.lang-kr {
+          font-family: "Hanyongun";
+          font-size: 37px;
+          top: 5%;
+          left: 36%;
+          transform: rotate(-10.24deg);
+        }
+  
+        &.lang-cn {
+          font-family: "SrcMing";
+          font-size: 42px;
+          top: 7%;
+          left: 36%;
+          transform: rotate(-10.24deg);
+        }
       }
 
       .line-1 {
@@ -72,17 +82,28 @@
       }
 
       .star {
-        top: 33%;
-        left: 16%;
+        top: 30%;
+        left: 14%;
       }
 
       .ment1 {
-        top: 45%;
-        left: 8%;
-        font-size: 16px;
-        font-family: "NotoSansKR-Medium";
-        text-align: center;
-        color: rgba($color: #000, $alpha: 0.6);
+        &.lang-kr {
+          top: 47%;
+          left: 5%;
+          font-size: 16px;
+          font-family: "NotoSansKR-Medium";
+          text-align: center;
+          color: rgba($color: #000, $alpha: 0.6);
+        }
+
+        &.lang-cn {
+          top: 45%;
+          left: 1%;
+          font-size: 18px;
+          font-family: "NotoSerif-Regular";
+          text-align: center;
+          color: rgba($color: #000, $alpha: 0.6);
+        }
       }
 
       .photo-hankang {
@@ -106,27 +127,48 @@
       }
 
       .ment2 {
-        top: 40%;
-        right: 10%;
-        font-size: 16px;
-        font-family: "NotoSansKR-Medium";
-        color: rgba($color: #000, $alpha: 0.6);
+        &.lang-kr {
+          top: 44%;
+          right: 10%;
+          font-size: 16px;
+          font-family: "NotoSansKR-Medium";
+          color: rgba($color: #000, $alpha: 0.6);
+        }
+        &.lang-cn {
+          top: 44%;
+          right: 8%;
+          font-size: 18px;
+          font-family: "NotoSerif-Regular";
+          color: rgba($color: #000, $alpha: 0.6);
+        }
       }
 
       .line-3 {
         width: 160px;
         height: 66px;
-        top: 64%;
-        right: 24%;
+        top: 66%;
+        right: 22%;
       }
 
       .let-go-btn {
-        bottom: 18%;
-        right: 10%;
-        font-size: 16px;
-        font-family: "NotoSansKR-Medium";
-        color: rgba($color: #000, $alpha: 0.6);
-        cursor: pointer;
+
+        &.lang-kr {
+          bottom: 18%;
+          right: 8%;
+          font-size: 16px;
+          font-family: "NotoSansKR-Medium";
+          color: rgba($color: #000, $alpha: 0.6);
+          cursor: pointer;
+        }
+
+        &.lang-cn {
+          bottom: 17%;
+          right: 10%;
+          font-size: 18px;
+          font-family: "NotoSerif-Regular";
+          color: rgba($color: #000, $alpha: 0.6);
+          cursor: pointer;
+        }
 
         .her-blue {
           color: #1369BC;
@@ -142,22 +184,40 @@
       align-items: center;
       position: relative;
 
-      .bold-ments {
-        font-family: "NotoSansKR-Bold";
-        font-weight: bold;
-        font-size: 20px;
-        position: absolute;
-        top: -6%;
+      &.lang-kr {
+        .bold-ments {
+          font-family: "NotoSansKR-Bold";
+          font-weight: bold;
+          font-size: 20px;
+          position: absolute;
+        }
+  
+        > span {
+          font-family: "NotoSansKR-Regular";
+          font-size: 16px;
+          line-height: 45px;
+          text-align: center;
+          position: absolute;
+          top: 13%;
+        }
       }
 
-      > span {
-        font-family: "NotoSansKR-Regular";
-        font-size: 16px;
-        line-height: 45px;
-        text-align: center;
-
-        position: absolute;
-        top: 13%;
+      &.lang-cn {
+        .bold-ments {
+          font-family: "SrcMing";
+          font-weight: bold;
+          font-size: 22px;
+          position: absolute;
+        }
+  
+        > span {
+          font-family: "NotoSerif-Regular";
+          font-size: 17px;
+          line-height: 45px;
+          text-align: center;
+          position: absolute;
+          top: 13%;
+        }
       }
     }
   }
