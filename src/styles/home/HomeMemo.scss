@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "NotoSerif-Regular";
+  src: url("src/assets/fonts/Black_Han_Sans,Noto_Sans,Noto_Serif_SC/Noto_Serif_SC/static/NotoSerifSC-Regular.ttf");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,8 +16,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  // backdrop-filter: blur(8px);
-  background: #0303032f;
+  background: #03030388;
   z-index: 1000;
 
   .memo-container {
@@ -31,11 +35,31 @@
       width: 535px;
       height: 695px;
 
-      > p {
-        font-family: "YES24";
-        font-size: 16px;
-        line-height: 150%;
+      .translate-wrapper {
+        .translate-container {
+          position: absolute;
+          top: 13%;
+          left: 47%;
+        }
+        
+        &.lang-kr {
+          p {
+            font-family: "YES24";
+            font-size: 16px;
+            line-height: 150%;
+          }
+        }
 
+        &.lang-cn {
+          p {
+            width: 535px;
+            position: absolute;
+            top: 18%;
+            font-family: "NotoSerif-Regular";
+            font-size: 17px;
+            line-height: 155%;
+          }
+        }
       }
     }
   }
