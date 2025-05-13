@@ -2,7 +2,6 @@ import useTranslateStore from '../../store/translate/useTraslateStore';
 
 import Nav from '../../components/nav/Nav';
 import Translate from '../../components/button/Translate';
-import HerItem from '../../components/about_her/HerItem';
 import "../../styles/about-her/AboutHer.scss";
 
 const AboutHer = () => {
@@ -86,7 +85,6 @@ const AboutHer = () => {
             )}
         </div>
       </div>
-      <HerItem />
     </div>
   );
 };
