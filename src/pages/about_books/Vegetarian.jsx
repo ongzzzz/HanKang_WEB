@@ -3,6 +3,8 @@ import VegetarianWriter from "../../components/about_books/Vegetarian/Vegetarian
 import Button from "../../components/button/Button";
 import VegetarianAni from "../../components/about_books/Vegetarian/VegetarianAni";
 
+import Translate from "../../components/button/Translate";
+
 import "../../styles/about_books/Vegetarian/Vegetarian.scss";
 
 const Vegetarian = () => {
@@ -10,6 +12,7 @@ const Vegetarian = () => {
   
   return (
     <div className="vegetarian-container">
+      <Translate />
       <Button onClick={() => nav("/aboutbooks")}/>
       <VegetarianWriter />
       <VegetarianAni />

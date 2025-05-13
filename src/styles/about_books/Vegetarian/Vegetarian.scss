@@ -4,8 +4,6 @@
 
   display: flex;
   position: relative;
-  // flex-direction: row;
-  // overflow: hidden;
 
   &::before {
     content: "";
@@ -17,6 +15,13 @@
     background-image: url("../../../images/about-books/vegetarian.jpg");
     background-size: cover;
     background-position: center;
+  }
+
+  .translate-wrapper {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    z-index: 9999;
   }
 
   .exit-btn {
