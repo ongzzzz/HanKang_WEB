@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "NotoSerif-Regular";
+  src: url("../../../assets/fonts/Black_Han_Sans,Noto_Sans,Noto_Serif_SC/Noto_Serif_SC/static/NotoSerifSC-Regular.ttf");
+}
+
+@font-face {
+  font-family: "NotoSerif-Bold";
+  src: url("../../../assets/fonts/Black_Han_Sans,Noto_Sans,Noto_Serif_SC/Noto_Serif_SC/static/NotoSerifSC-Bold.ttf");
+}
+
 .yeosu-back {
   background: #A5D0F9;
   width: 1440px;
@@ -11,15 +21,27 @@
   flex-direction: column;
   align-items: center;
   padding-top: 30px;
-    
+
+  .translate-wrapper {
+    position: absolute;
+    right: 4%;
+    top: 7%;
+  }
 
   .yeosu-title {
     display: flex;
     align-items: center;
 
-    > span {
-      font-family: "Hanyongun";
-      font-size: 50px;
+    .yeosu {
+      &.lang-kr {
+        font-family: "Hanyongun";
+        font-size: 50px;
+      }
+      &.lang-cn {
+        font-family: "NotoSerif-Bold";
+        font-size: 50px;
+        padding-bottom: 10px;
+      }
     }
 
     .exit-btn {
@@ -35,12 +57,23 @@
     align-items: center;
     width: 1223px;
     height: 290px;
-    font-family: "YES24";
-    font-size: 18px;
-    text-align: center;
-    line-height: 225%;
-    letter-spacing: 1%;
     overflow-y: scroll;
+
+    &.lang-kr {
+      font-family: "YES24";
+      font-size: 18px;
+      text-align: center;
+      line-height: 225%;
+      letter-spacing: 1%;
+    }
+
+    &.lang-cn {
+      font-family: "NotoSerif-Regular";
+      font-size: 18px;
+      text-align: center;
+      line-height: 225%;
+      letter-spacing: 5%;
+    }
 
     .yeosu-blue {
       color: #1369BC;

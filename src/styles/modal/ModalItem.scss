@@ -1,13 +1,31 @@
-.modalitem-container{
+@font-face {
+  font-family: "NotoSansKR-Bold";
+  src: url("../../assets/fonts/Noto_Sans_KR/static/NotoSansKR-Bold.ttf");
+}
+
+@font-face {
+  font-family: "NotoSerif-Medium";
+  src: url("../../assets/fonts/Black_Han_Sans,Noto_Sans,Noto_Serif_SC/Noto_Serif_SC/static/NotoSerifSC-Medium.ttf");
+}
+
+.modalitem-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
 
   .modalitem-title {
-    font-family: "SrcMing";
-    font-size: 25px;
-    margin-left: 25px;
+    &.lang-kr {
+      font-family: "NotoSansKR-Bold";
+      font-size: 25px;
+      margin-left: 25px;
+    }
+    
+    &.lang-cn {
+      font-family: "SrcMing";
+      font-size: 25px;
+      margin-left: 25px;
+    }
   }
 
   .modalitem-content {
@@ -15,10 +33,6 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    font-family: "NotoSansKR-Medium";
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 35px;
 
     .modalitem-img {
       background-position: center;
@@ -29,7 +43,19 @@
     .modalitem-script {
       width: 480px;
       height: 151px;
-      margin-top: -15px;
+      margin-top: -40px;
+
+      &.lang-kr {
+        font-family: "NotoSansKR-Medium";
+        font-size: 17px;
+        line-height: 35px;
+      }
+
+      &.lang-cn {
+        font-family: "NotoSerif-Medium";
+        font-size: 18px;
+        line-height: 35px;
+      }
     }
   }
   .goto-btn {

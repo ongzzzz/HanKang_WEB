@@ -2,28 +2,44 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
+import Translate from "../../components/button/Translate";
+import useTranslateStore from "../../store/translate/useTraslateStore";
+
 import Button from "../../components/button/Button";
 import GoButton from "../../components/button/GoButton";
 import Modal from "../../components/modal/Modal";
 import YeosuAni from "../../components/about_books/Yeosu/YeosuAni";
+
 import "../../styles/about_books/Yeosu/Yeosu.scss";
 
 const yeosuModalData = [
   {
-    title: "活着 -余华",
+    title: {
+      kr: "비 속에서 외치다 -유화",
+      cn: "在细雨中呼喊 -余华",
+    },
     image: "../../images/about-books/yeosu-book-1.png",
-    script: "이 소설은 주인공 푸구이가 중국의 현대사를 배경으로 수많은 개인적 비극과 가족의 상실을 겪으면서도 삶을 이어가는 이야기를 그린다. 삶의 고통과 상실을 다루면서도 인간의 회복력과 희망을 강조하는 점에서 『여수의 사랑』과 유사한 정서를 담고 있다.",
-    url: "https://mzhu8.com/book/1451/index.html",
+    script: {
+      kr: "주인공 손광린은 1960~70년대 중국 농촌에서 성장하며 가족의 해체, 폭력, 죽음 등 어두운 현실을 경험한다.그의 성장 과정은 고통과 상실, 인간 내면의 고독을 섬세하게 그려낸다. 『여수의 사랑』과 마찬가지로, 이 작품은 절제된 문체로 인간의 고통과 상실을 묘사하며, 시적인 이미지와 감성적인 분위기를 통해 독자에게 깊은 인상을 남긴다.",
+      cn: "《在细雨中呼喊》的主人公孙光林在20世纪60~70年代的中国农村成长, 经历了家庭解体、暴力与死亡等黑暗现实。他的成长过程细腻刻画了痛苦、丧失与人性深处的孤独。与《丽水之爱》一样, 这部作品以克制的笔触描绘人类的苦难与失去, 并通过诗意的意象与情感氛围, 给读者留下深刻印象。"
+    },
+    url: "https://book.douban.com/subject/30204337/",
   },
   {
-    title: "长恨歌 -王安忆",
-    image: "../../images/about-books/white-book-2.png",
-    script: "이 작품은 농촌 청년 샤오겅(小耿)이 도시로 와서 택배 일을 하며 병든 아버지의 치료비를 마련하는 과정을 그린다. 그는 배달 중 정신적으로 불안정한 여성 장거(张舸)를 만나게 되고, 두 사람은 함께 도피하는 여정을 떠난다. 이 과정에서 그들은 사회적 억압과 개인의 자유 사이에서 갈등하며, 자신의 내면과 마주하게 된다. 이는 『채식주의자』에서 영혜가 사회적 기대와 개인의 욕망 사이에서 갈등하는 모습과 상응한다.",
-    url: "https://baijiahao.baidu.com/s?id=1771624430917415402&wfr=spider&for=pc",
+    title: {
+      kr: "살아간다 -유화",
+      cn: "活着 -余华",
+    },
+    image: "../../images/about-books/yeosu-book-2.png",
+    script: {
+      kr: "한 사람의 일생을 통해 산다는 것의 의미를 담담하고도 깊이 있게 풀어낸 작품이다. 주인공 푸구이는 원래 지주 집안의 도련님이지만, 도박으로 집안을 망치고 몰락해 농민이 된다. 이후 중국 현대사의 굴곡을 겪으며, 가족 하나하나를 잃게 된다. 아들, 딸, 아내, 사위, 손자까지 모두 세상을 떠나고 결국 푸구이는 노쇠한 소 한마리와 함꼐 홀로 살아남는다.",
+      cn: "这是一部通过一个人的一生, 平静而深刻地诠释“活着”这一命题的作品。 主人公福贵原本是地主家的少爷, 但因赌博败光家产, 最终沦为农民。此后, 他历经中国近现代历史的风浪, 亲人一个个离他而去。儿子、女儿、妻子、女婿、孙子全部相继去世, 最终只剩下福贵与一头年迈的老牛相依为命。"
+    },
+    url: "https://book.douban.com/subject/27064488/",
   },
 ];
 
-const yeosuTextMap = [
+const yeosuTextKR = [
   <>
     한강의 첫 소설집인 『여수의 사랑』은 1995년에 출간되었으며, 삶의 본질적인 외로움과 고단함을 섬세하게 살피며 존재의 상실과 방황을 그려낸 작품이다. 이 소설집에는 여수발 기차에 실려와 서울역에 버려진 자흔과 아내를 잃은 아버지가 자신과 동생을 데리고 동반자살을 시도했던 정선의 이야기를 담은 표제작 <b>「여수의 사랑」</b>을 비롯하여, 동생의 죽음을 목격한 인규의 이야기인 <b>「질주」</b>, 식물인간이 된 쌍둥이 동생의 삶까지 살아내야 하는 동걸의 이야기인 <b>「야간열차」</b>, 백치 같은 여동생을 버리고 고향에서 도망친 정환의 이야기인 <b>「진달래 능선」</b>, 그리고 집과 고향을 버리고 고아처럼 떠돌며 자신을 찾으려 애쓰는 영진과 인숙의 이야기인 <b>「어둠의 사육제」</b> 등 총 여섯 편의 단편이 수록되어 있다. 이들 작품에서 <b className="yeosu-blue">여수</b>는 상처 입고 병든 이들이 마침내 다다를 서러운 마음의 이름으로 그려지며, 운명과 죽음에 대한 진지한 시선이 녹아 있는 이야기들을 통해 고독하고 고립된 등장인물들의 떠남, 버림, 방황, 추락을 담아낸다.
   </>,
@@ -35,7 +51,26 @@ const yeosuTextMap = [
   </>,
 ];
 
+const yeosuTextCN = [
+  <>
+    韩江的第一部小说集《丽水之爱》于1995年出版, 以细腻的笔触描绘了生命本质上的孤独与艰辛, 展现了存在的失落与彷徨。小说集收录了六篇短篇小说, 其中包括标题作品<b>《丽水之爱》</b>, 讲述了被火车从丽水运至首尔车站遗弃的子勋, 以及失去妻子的父亲带着子勋和弟弟企图一起自杀的故事；还有目睹弟弟死亡的仁圭的故事<b>《疾走》</b>, 必须替成为植物人的双胞胎弟弟继续活下去的东杰的故事<b>《夜间列车》</b>，抛弃如白痴般的妹妹、从故乡逃走的正焕的故事<b>《杜鹃岭》</b>, 以及抛弃家庭和故乡、如孤儿般流浪、努力寻找自我的英珍与仁淑的故事<b>《黑暗的狂欢节》</b>等。
+    在这些作品中,<b className="yeosu-blue">丽水</b>被描绘为一个承载着伤痛与疾病之人最终抵达的、充满悲凉情感的地名；通过对命运与死亡的深沉凝视，展现了那些孤独而被隔绝的角色们的离开、被弃、彷徨与堕落。
+  </>,
+  <>
+    韩江的《丽水之爱》以其抒情性突出的文体和丰富的意象为主要特点。作品通篇运用了诗意的语言与感官性的描写, 给予读者如同在阅读一首抒情诗般的印象。评论界亦评价道：“丰富的意象与感性的文体是韩江小说的重要特征”, 并指出其优美而抒情的文风使作品中悲剧性的内容更加凸显。
+    即便是描绘贞善与子勋之间残酷而悲伤的故事, 也因韩江节制的表达方式而呈现出宁静而隐隐作痛的回响。韩江并不直接倾泻暴力与痛苦, 而是通过意象唤起情感的涟漪, 引导读者沉浸于故事之中。譬如, 丽水的大海, 朦胧的晚霞, 昏暗的火车站等象征性场景默然出现, 代言人物的内心世界。
+    这种以意象为中心的叙述方式, 使读者能够感受到字里行间的情绪, 即使故事结束, 依然留下冷冽而炽热的余韵。
+  </>,
+  <>
+    此外, 韩江的文体既克制又极为细腻。即使在处理极为戏剧性的事件时, 她也摒弃夸张和煽情, 以平静的语调深入人物的内心。对此, 评论家评价道：“虽然故事和题材都极为强烈, 但由于以抒情而克制的文体来呈现, 反而使故事的力量被放大, 更能让读者沉浸其中。”事实上, 韩江细腻的语言甚至能让痛苦都显得美丽, 展现出一种独特的审美感, 而这种文学美学在《丽水之爱》中也得到了充分体现。
+    整部作品的氛围可以概括为静谧的悲哀、思念, 以及深沉的怜悯。沿着贞善与子勋那受伤的心路旅程前行, 读者会感受到一种既孤寂又温暖的情感。韩江特有的平静抒情性包容了故事中的绝望与希望, 即使在悲剧之中, 也能发现一缕人性的温情与怜悯的光芒。
+  </>,
+];
+
 const Yeosu = () => {
+  const { lang } = useTranslateStore();
+  const mentText = lang === "kr" ? "비슷한 중국 작품" : "相似的中国作品";
+
   const [isOpen, setIsOpen] = useState(false);
   const scrollRef = useRef(null);
   const [rootEl, setRootEl] = useState(null);
@@ -51,26 +86,29 @@ const Yeosu = () => {
     <>
       <div className="yeosu-back"></div>
       <div className="yeosu-container">
+        <Translate />
         <div className="yeosu-title">
           <Button onClick={() => nav("/aboutbooks")}/>
-          <span>여수의 사랑</span>
+          <span className={`yeosu lang-${lang}`}>
+            {lang === "kr" ? "여수의 사랑" : "丽水之爱"}
+          </span>
         </div>
-        <div className="yeosu-content" ref={scrollRef}>
-          {yeosuTextMap.map((item, idx) => (
+        <div className={`yeosu-content lang-${lang}`} ref={scrollRef}>
+          {(lang === "kr" ? yeosuTextKR : yeosuTextCN).map((item, idx) => (
             <motion.p
               key={idx}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3, root: rootEl }}
               transition={{ duration: 0.8, delay: idx * 0.2 }}
-              className="yeoosu-paragraph"
+              className="yeosu-paragraph"
             >
               {item}
             </motion.p>
           ))}
         </div>
         <YeosuAni />
-        <GoButton ment="비슷한 중국 작품" onClick={() => setIsOpen(true)}/>
+        <GoButton ment={mentText} onClick={() => setIsOpen(true)}/>
       </div>
 
       {isOpen && (
