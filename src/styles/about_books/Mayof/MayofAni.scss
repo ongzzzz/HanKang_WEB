@@ -24,10 +24,18 @@
       top: 17%;
 
       .book-text {
-        font-family: "Hanyongun";
-        font-size: 18px;
-        line-height: 225%;
-        letter-spacing: 1%;
+        &.lang-kr {
+          font-family: "Hanyongun";
+          font-size: 18px;
+          line-height: 225%;
+          letter-spacing: 1%;
+        }
+        &.lang-cn {
+          font-family: "NotoSerif-Medium";
+          font-size: 18px;
+          line-height: 230%;
+          letter-spacing: 2%;
+        }
       }
 
       .goto-btn {

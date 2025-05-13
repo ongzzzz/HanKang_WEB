@@ -8,6 +8,13 @@
   align-items: center;
   overflow: hidden;
 
+  .translate-wrapper {
+    position: absolute;
+    top: 5%;
+    right: 4%;
+    z-index: 1000;
+  }
+
   .exit-btn {
     position: absolute;
     background-image: url("../../../assets/svg/button/exit_button_black.svg");

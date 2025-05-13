@@ -11,10 +11,17 @@
       display: flex;
       height: 85px;
 
-      > span {
-        font-family: "Hanyongun";
-        font-size: 60px;
-        line-height: 140%;
+      .mayof {
+        &.lang-kr {
+          font-family: "Hanyongun";
+          font-size: 60px;
+          line-height: 140%;
+        }
+        &.lang-cn {
+          font-family: "SrcMing";
+          font-size: 60px;
+          line-height: 140%;
+        }
       }
 
       > img {
@@ -27,13 +34,22 @@
     }
 
     .mayof-writer-content {
-      font-family: "YES24";
-      font-size: 18px;
-      line-height: 225%;
-      letter-spacing: 1%;
       height: 600px;
       overflow-y: scroll;
       padding-right: 20px;
+
+      &.lang-kr {
+        font-family: "YES24";
+        font-size: 18px;
+        line-height: 225%;
+        letter-spacing: 1%;
+      }
+      &.lang-cn {
+        font-family: "NotoSerif-Regular";
+        font-size: 20px;
+        line-height: 225%;
+        letter-spacing: 1%;
+      }
 
       &::-webkit-scrollbar {
         width: 1.5px;
