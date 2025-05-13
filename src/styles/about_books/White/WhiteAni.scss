@@ -38,9 +38,17 @@ body {
     .kr {
       position: absolute;
       left: 10px;
-      font-size: 70px;
-      font-family: "Hanyongun";
       color: #000;
+
+      &.lang-kr {
+        font-size: 70px;
+        font-family: "Hanyongun";
+      }
+      &.lang-cn {
+        font-size: 70px;
+        font-family: "SrcMing";
+        margin-top: 10px;
+      }
     }
   }
 
@@ -48,11 +56,20 @@ body {
     width: 425px;
     overflow: hidden;
 
-    > p {
-      font-family: "YES24";
-      font-size: 20px;
-      line-height: 200%;
+    .white-text {
       color: #000;
+
+      &.lang-kr {
+        font-family: "YES24";
+        font-size: 20px;
+        line-height: 200%;
+      }
+      &.lang-cn {
+        font-family: "NotoSerif-Regular";
+        font-size: 21px;
+        line-height: 200%;
+        letter-spacing: -1px;
+      }
 
       .split-char {
         display: inline-block;
