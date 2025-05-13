@@ -1,0 +1,18 @@
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .year {
+    font-family: "NotoSansKR-Medium";
+    font-size: 21px;
+    color: #1369BC;
+  }
+
+  .title {
+    font-family: "NotoSansKR-Regular";
+    font-size: 18px;
+    color: #464646;
+    line-height: 1.7;
+  }
+}

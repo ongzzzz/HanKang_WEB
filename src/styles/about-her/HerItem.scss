@@ -1,0 +1,289 @@
+.herr-container {
+  width: 100vw;
+  // height: 100vh;
+  background-color: #FFFAEE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .good {
+    position: absolute;
+    top: 18px;
+  }
+
+  > .title {
+    font-family: "Hanyongun";
+    font-size: 40px;
+    margin-top: 75px;
+  }
+
+  .downpoint {
+    position: absolute;
+    top: 120px;
+    right: 620px;
+  }
+
+  .foot-1 {
+    margin-top: -50px;
+  }
+
+  .book-1 {
+    position: absolute;
+    top: 20%;
+    left: 38%;
+  }
+
+  .st-point1 {
+    position: absolute;
+    top: 25%;
+    right: 42%;
+  }
+
+  .item-1 {
+    position: absolute;
+    top: 24%;
+    right: 22%;
+  }
+
+  .st-up-1 {
+    position: absolute;
+    top: 22%;
+    right: 40%;
+  }
+
+  .st-point2 {
+    position: absolute;
+    top: 40%;
+    left: 42%;
+  }
+
+  .item-2 {
+    position: absolute;
+    top: 40%;
+    left: 23%;
+    text-align: right;
+  }
+
+  .book-2 {
+    position: absolute;
+    top: 52%;
+    left: 38%;
+  }
+
+  .st-point3 {
+    position: absolute;
+    top: 53%;
+    right: 41%;
+  }
+
+  .item-3 {
+    position: absolute;
+    top: 57%;
+    right: 24%;
+  }
+
+  .book-3 {
+    position: absolute;
+    top: 73%;
+    right: 38%;
+  }
+
+  .st-point4 {
+    position: absolute;
+    top: 77%;
+    left: 42%;
+  }
+
+  .item-4 {
+    position: absolute;
+    top: 82%;
+    left: 22%;
+    text-align: right;
+  }
+
+  .foot-2 {
+    margin-top: -150px;
+  }
+  
+  .book-4 {
+    position: absolute;
+    top: 97%;
+    left: 38%;
+  }
+
+  .st-flower {
+    position: absolute;
+    top: 96%;
+    left: 34%;
+  }
+
+  .st-up-2 {
+    position: absolute;
+    top: 95%;
+    left: 47%;
+  }
+
+  .st-point5 {
+    position: absolute;
+    top: 99%;
+    left: 53%;
+  }
+
+  .item-5 {
+    position: absolute;
+    top: 106%;
+    left: 56%;
+  }
+
+  .book-5 {
+    position: absolute;
+    top: 120%;
+    right: 36%;
+  }
+
+  .st-snow {
+    position: absolute;
+    top: 124%;
+    right: 29%;
+  }
+
+  .st-point6 {
+    position: absolute;
+    top: 125%;
+    left: 43%;
+  }
+
+  .item-6 {
+    position: absolute;
+    top: 128%;
+    left: 25%;
+    text-align: right;
+  }
+
+  .book-6 {
+    position: absolute;
+    top: 144%;
+    left: 38%;
+  }
+
+  .st-point7 {
+    position: absolute;
+    top: 155%;
+    right: 42%;
+  }
+
+  .item-7 {
+    position: absolute;
+    top: 147%;
+    right: 30%;
+  }
+
+  .st-point8 {
+    position: absolute;
+    top: 170%;
+    left: 44%;
+  }
+
+  .item-8 {
+    position: absolute;
+    top: 176%;
+    left: 34%;
+    text-align: right;
+  }
+
+  .foot-3 {
+    margin-top: -150px;
+  }
+
+  .book-7 {
+    position: absolute;
+    top: 184%;
+    right: 36%;
+  }
+
+  .st-up-3 {
+    position: absolute;
+    top: 181%;
+    right: 34%;
+  }
+
+  .st-point9 {
+    position: absolute;
+    top: 189%;
+    left: 43%;
+  }
+
+  .item-9 {
+    position: absolute;
+    text-align: right;
+    top: 196%;
+    left: 33%;
+  }
+
+  .st-point10 {
+    position: absolute;
+    top: 208%;
+    right: 44%;
+  }
+
+  .item-10 {
+    position: absolute;
+    top: 211%;
+    right: 35%;
+  }
+
+  .book-8 {
+    position: absolute;
+    top: 220%;
+    left: 38%;
+  }
+
+  .st-up-4 {
+    position: absolute;
+    top: 217%;
+    left: 36%;
+  }
+
+  .st-point11 {
+    position: absolute;
+    top: 224%;
+    right: 43%;
+  }
+
+  .item-11 {
+    position: absolute;
+    top: 229%;
+    right: 19%;
+  }
+
+  .st-point12 {
+    position: absolute;
+    top: 250%;
+    left: 41%;
+  }
+
+  .item-12 {
+    position: absolute;
+    top: 253%;
+    left: 27%;
+    text-align: right;
+  }
+
+  .st-point13 {
+    position: absolute;
+    top: 260%;
+    right: 42%;
+  }
+
+  .item-13 {
+    position: absolute;
+    top: 264%;
+    right: 38%;
+  }
+
+  .st-up-5 {
+    position: absolute;
+    top: 266%;
+    right: 36%;
+  }
+}
