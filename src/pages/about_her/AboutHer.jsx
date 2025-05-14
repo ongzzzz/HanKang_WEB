@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 import useTranslateStore from '../../store/translate/useTraslateStore';
 
 import Nav from '../../components/nav/Nav';
@@ -6,6 +8,7 @@ import "../../styles/about-her/AboutHer.scss";
 
 const AboutHer = () => {
   const { lang } = useTranslateStore();
+  const nav = useNavigate();
 
   return (
     <div className="abouther-container">
@@ -57,7 +60,7 @@ const AboutHer = () => {
           <p className={`let-go-btn lang-${lang}`}>
             {lang === "kr" ? (
               <>
-                <b className='her-blue'>수상경력</b> 보러가기
+                <b className='her-blue' onClick={() => nav(`/abouther/awards`)}>수상경력</b> 보러가기
               </>
             ) : (
               <>

@@ -15,12 +15,12 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/abouther" element={<AboutHer />}/>
+        <Route path="/abouther/awards" element={<HerItem />}/>
         <Route path="/aboutbooks" element={<Carousel />}/>
         <Route path="/aboutbooks/vegetarian" element={<Vegetarian />}/>
         <Route path="/aboutbooks/white" element={<White />}/>
         <Route path="/aboutbooks/yeosu" element={<Yeosu />}/>
         <Route path="/aboutbooks/mayof" element={<Mayof />}/>
-        <Route path="/her" element={<HerItem />}/>
       </Routes>
     </BrowserRouter>
   );
