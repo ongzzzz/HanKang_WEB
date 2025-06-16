@@ -72,9 +72,9 @@ const Yeosu = () => {
   const mentText = lang === "kr" ? "비슷한 중국 작품" : "相似的中国作品";
 
   const [isOpen, setIsOpen] = useState(false);
+  const nav = useNavigate();
   const scrollRef = useRef(null);
   const [rootEl, setRootEl] = useState(null);
-  const nav = useNavigate();
 
   useEffect(() => {
     if (scrollRef.current) {

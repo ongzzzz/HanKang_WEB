@@ -20,7 +20,7 @@ const WhiteAni = () => {
   const letters = useMemo(() => text.split(""), [text])
 
   useEffect(() => {
-    if (!contentRef.current) return
+    if (!contentRef.current) return;
 
     const { chars } = splitText(contentRef.current)
 

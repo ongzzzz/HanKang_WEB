@@ -13,9 +13,9 @@ import "../../styles/about_books/Mayof/Mayof.scss";
 
 const Mayof = () => {
   const { lang } = useTranslateStore();
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isOpen, setIsOpen] = useState(false);
   const nav = useNavigate();
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (e) => {

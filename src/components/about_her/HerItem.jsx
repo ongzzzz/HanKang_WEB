@@ -1,5 +1,4 @@
 import useTranslateStore from "../../store/translate/useTraslateStore";
-// import FadeIn from "./FadeIn";
 import Items from "./Items";
 import "../../styles/about-her/HerItem.scss";
 
