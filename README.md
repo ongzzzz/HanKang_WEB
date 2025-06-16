@@ -1,12 +1,26 @@
-# HanKang_WEB
+# 📝 HanKang_WEB
 基于React的韩江及其作品交互式网站的设计与实现的过程记录
-위를 주제로 한 대학 졸업작품 코드 기록입니다.
+<br>
+<React 기반의 한강 작가와 그녀의 작품세계를 소개하는 인터랙티브 웹사이트 디자인 및 구현> 을 주제로 한 대학졸업작품 저장소입니다. 🔍
 
-## 기술 스택
+<br>
 
-<p>
-  <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
-  <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-  <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
-  <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+## 🛠️ Tech
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=figma,ps,sass,js,react" />
+  </a>
 </p>
+
+<br>
+
+## 🖥️ 작품 소개
+
+#### 사용자 정의 및 로드맵
+![페르소나](public/images/README/Persona.png)
+![Journey Map](public/images/README/Journey_Map.png)
+![Journey Map](public/images/README/Journey_Map-1.png)
+![IA](public/images/README/IA.jpg)
+
+#### 시연 영상
+[링크 바로가기](https://youtu.be/J8FGLSFYMAA)
